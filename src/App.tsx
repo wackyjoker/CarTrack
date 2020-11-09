@@ -1,9 +1,13 @@
 import React from "react";
-
+import "./styles/style.scss";
+import List from "./components/List/index";
+import { Provider } from "./components/Contexts/index";
 function App() {
   return (
     <div className="App">
-      <div id="Container">Hello World</div>
+      <Provider>
+        <List />
+      </Provider>
     </div>
   );
 }
