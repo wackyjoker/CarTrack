@@ -1,4 +1,3 @@
-import { Context } from "mocha";
 import React, { useContext, useState, useEffect } from "react";
 import { IAddress, ICompany } from "./Interfaces";
 
@@ -7,7 +6,7 @@ export type IUser = {
   name: string;
   username: string;
   email: string;
-  adress: IAddress;
+  address: IAddress;
   phone: string;
   website: string;
   company: ICompany;
@@ -18,11 +17,11 @@ export type IContext = {
   isLoading: boolean;
   error: string | null;
 };
-
+export const Contexts = React.createContext<IContext>(null);
 export const useData = () => useContext(Contexts);
 
 export const Provider: React.FC = ({ children }) => {
-  const [users, setUsers] = useState(null);
+  const [users, setUsers] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   useEffect(() => {
@@ -31,8 +30,7 @@ export const Provider: React.FC = ({ children }) => {
       await fetch(url)
         .then((res) => res.json())
         .then((res) => {
-          setUsers(res);
-          console.log(res);
+          setUsers((prevState) => res);
           setIsLoading(false);
         })
         .catch((error) => {
@@ -40,6 +38,7 @@ export const Provider: React.FC = ({ children }) => {
           setIsLoading(false);
         });
     };
+    getData();
   }, []);
   return (
     <Contexts.Provider value={{ users, isLoading, error }}>
@@ -47,4 +46,3 @@ export const Provider: React.FC = ({ children }) => {
     </Contexts.Provider>
   );
 };
-const Contexts = React.createContext<IContext>(null);

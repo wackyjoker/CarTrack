@@ -19,7 +19,7 @@ module.exports = (env) => {
     plugins: [
       new HtmlWebpackPlugin({
         hash: true,
-        template: "./public/index.html",
+        template: "./src/index.html",
       }),
       new MiniCssExtractPlugin({
         // Options similar to the same options in webpackOptions.output
