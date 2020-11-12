@@ -21,6 +21,13 @@
       width: 2em;
       border-radius: 50%;
     }
+    .more__icon {
+      margin-left: auto;
+      img {
+        height: 2em;
+        width: 2em;
+      }
+    }
     h3 {
       margin: 0 15px 15px;
     }
@@ -34,8 +41,16 @@
     }
   }
   .list-body {
-    .col {
+    div {
       width: 50%;
     }
+  }
+}
+@media only screen and (max-width: 800px) {
+  .list-body {
+    flex-direction: column;
+  }
+  .col {
+    min-width: 100%;
   }
 }
