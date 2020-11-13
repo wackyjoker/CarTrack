@@ -50,7 +50,6 @@ const CardDetail = () => {
           </div>
         </div>
         <div className="detail-body row">
-          {/* <GoogleMap defaultZoom={10} defaultCenter={{ lat: `${address.geo.lat}`, lng: `${address.geo.lng}` }} /> */}
           <Map lat={parseFloat(lat)} lng={parseFloat(lng)} />
         </div>
         <div className="detail-body col detail-companyContainer">
