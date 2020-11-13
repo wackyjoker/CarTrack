@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 import { useData } from "../Contexts/index";
+import Loading from "../Loading/Loading";
 import ListBody from "../CardList/ListBody";
 const CardDetail = () => {
   const context = useData();
@@ -8,7 +9,11 @@ const CardDetail = () => {
   const userID = parseInt(userid);
   const { ...user } = context.users[userID];
   const { id, address } = user;
-  console.log(user.name);
+
+  if (context.isLoading) {
+    return <Loading />;
+  }
+
   return (
     <section id="section-list" key={id}>
       <div className="list-title col">

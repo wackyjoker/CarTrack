@@ -30,6 +30,7 @@
   }
 }
 .search__select {
+  padding: 0.2rem;
   font-size: inherit;
   position: absolute;
   height: 100%;
@@ -48,6 +49,7 @@
 .search__icon {
   position: absolute;
   left: 0.1rem;
+  top: 0.2rem;
   width: 2em;
   transform: scaleX(-1);
 }

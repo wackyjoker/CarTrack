@@ -28,7 +28,7 @@ const CardList: React.FC = () => {
         </div>
         <ListBody value1={address.city} value2={phone} title1={"Address : "} title2={"Phone : "} />
         <ListBody
-          value1={<a href={website}>{website}</a>}
+          value1={<a href={`http://${website}`}>{website}</a>}
           value2={company.name}
           title1={"Website : "}
           title2={"Company : "}
