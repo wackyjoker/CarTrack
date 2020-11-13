@@ -1,12 +1,18 @@
 import React from "react";
 import "./styles/style.scss";
-import List from "./components/List/index";
+import Container from "./components/Container/index";
+
+import Header from "./components/Header/index";
 import { Provider } from "./components/Contexts/index";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 function App() {
   return (
     <div className="App">
       <Provider>
-        <List />
+        <Router>
+          <Header />
+          <Container />
+        </Router>
       </Provider>
     </div>
   );

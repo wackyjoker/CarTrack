@@ -1,7 +1,7 @@
 import React from "react";
 import { IAddress } from "../Contexts/Interfaces";
 type ListBodyProps = {
-  value1: string;
+  value1: string | JSX.Element;
   value2: string;
   title1: string;
   title2: string;
