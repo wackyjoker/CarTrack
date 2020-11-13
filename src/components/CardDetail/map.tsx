@@ -14,7 +14,6 @@ const containerStyle = {
 };
 
 const Map: React.FC<IProps> = (props) => {
-  console.log(props);
   const [map, setMap] = React.useState(null);
   const onLoad = React.useCallback(function callback(map) {
     const bounds = new window.google.maps.LatLngBounds();
@@ -27,7 +26,7 @@ const Map: React.FC<IProps> = (props) => {
   }, []);
 
   return (
-    <LoadScript googleMapsApiKey="YOUR_API_KEY">
+    <LoadScript googleMapsApiKey="AIzaSyBVMdwWqQ66lo2PPRZFI7YDZeLs75fZ4yA">
       <GoogleMap mapContainerStyle={containerStyle} center={props} zoom={10} onLoad={onLoad} onUnmount={onUnmount}>
         {/* Child components, such as markers, info windows, etc. */}
         <></>
