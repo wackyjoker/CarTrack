@@ -10,11 +10,11 @@ type ListBodyProps = {
 const ListBody: React.FC<ListBodyProps> = (props) => {
   return (
     <div className="list-body row ">
-      <div className="col">
+      <div className="col list-col">
         <h5>{props.title1}</h5>
         <p>{props.value1}</p>
       </div>
-      <div className="col">
+      <div className="col list-col">
         <h5>{props.title2}</h5>
         <p>{props.value2}</p>
       </div>

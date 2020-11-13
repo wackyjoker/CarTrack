@@ -2,17 +2,14 @@
   display: flex;
   flex-direction: column;
   margin: 1em 0;
-  -webkit-box-shadow: 2px 5px 16px 0px SLATEGRAY,
-    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  -webkit-box-shadow: 2px 5px 16px 0px SLATEGRAY, 5px 5px 15px 5px rgba(0, 0, 0, 0);
   box-shadow: 2px 5px 16px 0px slategray, 5px 5px 15px 5px rgba(0, 0, 0, 0);
-  p {
-    color: silver;
-    font-weight: 200;
-  }
-  .col {
+
+  .list-col {
     padding: 1em;
     border: 2px solid GAINSBORO;
   }
+
   .list-title {
     width: 100%;
     background-color: WHITESMOKE;
@@ -28,7 +25,7 @@
         width: 2em;
       }
     }
-    h3 {
+    .col {
       margin: 0 15px 15px;
     }
     .user_name {
@@ -46,11 +43,15 @@
     }
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 768px) {
   .list-body {
     flex-direction: column;
+    .col {
+      min-width: 100%;
+    }
   }
-  .col {
-    min-width: 100%;
+  .list-title .row {
+    flex-direction: column;
+    align-items: center;
   }
 }

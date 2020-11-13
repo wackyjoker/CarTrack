@@ -1,0 +1,30 @@
+.detail-companyContainer {
+  justify-content: space-around;
+  .row {
+    margin: 2rem 0;
+  }
+}
+
+.detail-body {
+  padding: 1em;
+  border: 2px solid GAINSBORO;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  .col {
+    padding: 1em;
+  }
+}
+.detail-company {
+  justify-content: space-around;
+}
+.company-spans {
+  flex-flow: wrap;
+  justify-content: space-around;
+  span {
+    background-color: silver;
+    padding: 0 0.5rem;
+    margin: 0.5rem auto;
+    border-radius: 0.7em;
+  }
+}

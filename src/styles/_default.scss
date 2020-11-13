@@ -14,7 +14,10 @@ body {
   margin: 0 auto;
   padding: 0;
 }
-
+p {
+  color: silver;
+  font-weight: 200;
+}
 .row {
   display: flex;
   flex-direction: row;
