@@ -24,7 +24,7 @@ export type IContext = {
 export const Contexts = React.createContext<IContext>(null);
 export const useData = () => useContext(Contexts);
 
-export const Provider: React.FC = ({ children }) => {
+export const UserProvider: React.FC = ({ children }) => {
   const [users, setUsers] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [search, setSearch] = useState("");
@@ -50,12 +50,11 @@ export const Provider: React.FC = ({ children }) => {
         .then((res) => res.json())
         .then((res) => {
           setUsers((prevState) => res);
-          setIsLoading(false);
         })
         .catch((error) => {
-          setIsLoading(false);
           console.log(error);
-        });
+        })
+        .finally(() => setIsLoading(false));
     };
     getData();
   }, []);

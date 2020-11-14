@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import { useData } from "../Contexts/index";
+import { useData } from "../Contexts";
+
 const Header: React.FC = () => {
   const context = useData();
+  const { handleSearch, searchOption } = context;
   return (
     <header id="header">
       <div className="search-bar">
@@ -9,12 +11,9 @@ const Header: React.FC = () => {
           type="text"
           placeholder="search by "
           className="search__input"
-          onChange={(e: React.ChangeEvent<{ value: string }>) => context.handleSearch(e.target.value)}
+          onChange={(e) => handleSearch(e.target.value)}
         />
-        <select
-          className="search__select"
-          onChange={(e: React.ChangeEvent<{ value: string }>) => context.searchOption(e.target.value)}
-        >
+        <select className="search__select" onChange={(e) => searchOption(e.target.value)}>
           <option value="name">Name</option>
           <option value="email">Email</option>
         </select>

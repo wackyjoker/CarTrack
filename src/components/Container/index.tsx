@@ -1,6 +1,6 @@
 import React from "react";
-import CardList from "../CardList/index";
-import CardDetail from "../CardDetail/index";
+import CardList from "../CardList";
+import CardDetail from "../CardDetail";
 import { Switch, Route } from "react-router-dom";
 const Container: React.FC = () => {
   return (
