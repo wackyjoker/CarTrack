@@ -1,6 +1,6 @@
 A quick review on https://cartrack-app.herokuapp.com/ <br/>
 
-Skill assessment Project from CarTrack's third interview. (Pending)
+Skill assessment Project for interview. (Pending)
 
 ### `npm start`
 
