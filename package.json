@@ -43,7 +43,7 @@
   "scripts": {
     "start": "node server.js",
     "build": "webpack --env production --config webpack.config.js",
-    "dev-server": "webpack-dev-server --watch --open --mode development --colors"
+    "dev-server": "webpack-dev-server --watch  --mode development --colors"
   },
   "eslintConfig": {
     "extends": [
